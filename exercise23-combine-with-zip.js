@@ -37,6 +37,6 @@ function() {
 
     return Array.
         zip(videos,bookmarks, function(left,right) {
-            return {videoId: left.id, bookmarkId: right.id}
+            return {videoId: left.id, bookmarkId: right.id};
         }); //... finish this expression
 }
