@@ -47,11 +47,10 @@ function() {
     // ------------   INSERT CODE HERE!  -----------------------------------
     // Use map and concatAll to flatten the movieLists in a list of video ids.
     // ------------   INSERT CODE HERE!  -----------------------------------
-  movieLists.map(function(firstObj) {
-    return obj.videos;
-  }).map(function(movie) {
-    return movie.id
-
-    return movieLists // Complete this expression!
-
+    return movieLists.
+      map(function(movieList) {
+        return movieList.videos.map(function(video) {
+            return video.id;
+          });
+      }).concatAll();
 }
